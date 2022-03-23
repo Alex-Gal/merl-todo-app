@@ -8,8 +8,8 @@ export const AuthPage = () => {
         <BrowserRouter>
             <Routes>
                 <React.Fragment>
-                    {/* <div className='container'>
-                        <div className='auth-page'> */}
+                    <div className='container'>
+                        <div className='auth-page'>
                             <Route path='/login'>
                                 <h3>Авторизация</h3>
                                 <form className="form form-login">
@@ -73,8 +73,8 @@ export const AuthPage = () => {
                                     </div>
                                 </form>
                             </Route>
-                        {/* </div>
-                    </div> */}
+                            </div>
+                        </div>
                 </React.Fragment>
             </Routes>
         </BrowserRouter>
