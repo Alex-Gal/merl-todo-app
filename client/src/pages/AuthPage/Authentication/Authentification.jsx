@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import '../../AuthPage/AuthPage.scss'
 import '../AuthPage.scss'
-// import axios from 'axios'
-
+import axios from 'axios'
 
 export const Authentification = () => {
     
@@ -18,18 +16,18 @@ export const Authentification = () => {
         console.log(form);
     }
 
-    // const registerHandler = async () => {
-    //     try {
-    //         await axios.post('/api/auth/registration', {...form}, {
-    //             headers: {
-    //                 'Content-type': 'application/json'
-    //             }
-    //         })
-    //         .then(response => console.log(response))
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
+    const loginHandler = async () => {
+        try {
+            await axios.post('/api/auth/login', {...form}, {
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+            .then(response => console.log(response))
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <div className='container'>
@@ -59,6 +57,7 @@ export const Authentification = () => {
                     <div className='row'>
                         <button
                             className='wawes-effect wawes-light btn btn blue'
+                            onClick={loginHandler}
                         >
                             Войти
                         </button>
