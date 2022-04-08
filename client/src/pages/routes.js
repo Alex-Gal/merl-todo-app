@@ -1,14 +1,17 @@
 import React from "react";
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import { MainPage } from './AuthPage/MainPage/MainPage'
 import { AuthPage } from './AuthPage/AuthPage'
+import { NotFoundPage } from './AuthPage/NotFoundPage/NotFoundPage'
+import { Authentification } from './AuthPage/Authentication/Authentification'
 
 
 export const useRoutes = (isLogin) => {
     if (isLogin) {
         return (
             <Routes>
-                <Route path="/" element={MainPage} />
+                <Route path="/" element={<AuthPage/>} />
+                <Route path="*" element={<NotFoundPage/>} />
                 {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
             </Routes>
         )
@@ -16,7 +19,8 @@ export const useRoutes = (isLogin) => {
 
     return (
         <Routes>
-            <Route path="/login" element={AuthPage} />
+            <Route path="/login" element={<Authentification/>} />
+            <Route path="*" element={<NotFoundPage/>} />
             {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
         </Routes>
     )

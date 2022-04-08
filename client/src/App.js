@@ -18,7 +18,7 @@ function App() {
         <BrowserRouter>
           <Navbar />
           {/* <AuthPage /> */}
-          {routes}
+          { routes }
         </BrowserRouter>
       </div>
     </AuthContext.Provider>

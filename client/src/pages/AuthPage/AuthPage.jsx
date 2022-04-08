@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { Authentification } from './Authentication/Authentification'
 import { Registration } from './Registration/Registration'
 import { NotFoundPage } from './NotFoundPage/NotFoundPage'
+import { MainPage } from './MainPage/MainPage'
 
 export const AuthPage = () => {
 
@@ -13,7 +14,7 @@ export const AuthPage = () => {
             <Link to='/login'>Login</Link>
             <Link to='/registration'>Registration</Link>
             <Routes>
-                <Route path='/' element={<>Главная</>} />
+                <Route path='/' element={<MainPage/>} />
                 <Route path='/login' element={<Authentification />} />
                 <Route path='/registration' element={<Registration />} />
                 <Route path='*' element={<NotFoundPage />} />
