@@ -2,9 +2,9 @@ import './App.scss';
 import { Navbar } from './components/Navbar/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 import { useRoutes } from './pages/routes';
-// import { AuthPage } from './pages/AuthPage/AuthPage';
 import { AuthContext } from './context/AuthContext';
 import { useAuth } from './hooks/auth.hook';
+// import { AuthPage } from './pages/AuthPage/AuthPage';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <div className="app">
         <BrowserRouter>
           <Navbar />
-          {/* <AuthPage /> */}
+          {/* <AuthPage/> */}
           { routes }
         </BrowserRouter>
       </div>
